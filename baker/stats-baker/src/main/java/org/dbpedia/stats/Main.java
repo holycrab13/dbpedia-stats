@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.text.ParseException;
 
 import org.dbpedia.stats.analyzer.InstanceCountAnalyzer;
+import org.dbpedia.stats.analyzer.InstancesPerTypeAnalyzer;
 import org.dbpedia.stats.analyzer.PropertyCountAnalyzer;
 import org.dbpedia.stats.analyzer.TripleCountAnalyzer;
 
@@ -26,7 +27,8 @@ public class Main {
 		StatsAnalyzerBase[] analyzers = new StatsAnalyzerBase[] {
 			new TripleCountAnalyzer(),
 			new PropertyCountAnalyzer(),
-			new InstanceCountAnalyzer()
+			new InstanceCountAnalyzer(),
+			new InstancesPerTypeAnalyzer()
 		};
 
 		System.out.println("COLLECTION_URI: " + collectionUri);

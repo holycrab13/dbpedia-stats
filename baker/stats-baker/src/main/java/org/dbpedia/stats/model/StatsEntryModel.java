@@ -1,5 +1,7 @@
 package org.dbpedia.stats.model;
 
+import java.util.Map;
+
 public class StatsEntryModel {
 
 	private long tripleCount;
@@ -7,6 +9,8 @@ public class StatsEntryModel {
 	private long propertyCount;
 	
 	private long instanceCount;
+	
+	private Map<String, Long> instanceCountsPerType;
 	
 	private String time;
 
@@ -40,5 +44,13 @@ public class StatsEntryModel {
 
 	public void setInstanceCount(long instanceCount) {
 		this.instanceCount = instanceCount;
+	}
+
+	public Map<String, Long> getInstanceCountsPerType() {
+		return instanceCountsPerType;
+	}
+
+	public void setInstanceCountsPerType(Map<String, Long> instanceCountsPerType) {
+		this.instanceCountsPerType = instanceCountsPerType;
 	}
 }

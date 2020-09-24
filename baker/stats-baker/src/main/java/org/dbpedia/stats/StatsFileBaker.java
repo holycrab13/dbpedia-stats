@@ -72,6 +72,10 @@ public class StatsFileBaker
 	}
 
 	private void createStatsForFile(File file, StatsAnalyzerBase[] analyzers)  {
+		System.out.println("=================================================================================");
+		System.out.println("Baking stats for file: " + file.getName());
+		System.out.println("=================================================================================");
+		
 		try (InputStream in = getBufferedReaderForCompressedFile(file)) {
 			RDFParser.create()
 			.source(in)
