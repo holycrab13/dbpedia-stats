@@ -16,3 +16,10 @@ Open web app at
 ```
 localhost:5000
 ```
+
+
+## Demo
+
+```
+http://akswnc7.informatik.uni-leipzig.de:5005/
+```
