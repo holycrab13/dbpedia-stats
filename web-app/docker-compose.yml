@@ -1,0 +1,15 @@
+version: '3'
+services:
+  stats-baker:
+    image: stats-baker:latest
+    environment:
+      COLLECTION_URI: ${COLLECTION_URI}
+      STATS_DIR: ${STATS_DIR}
+    volumes:
+      - ${PUBLIC_HTML_DIR}:${STATS_DIR}
+  stats-web-app:
+    image: httpd:2.4
+    ports:
+      - 5000:80
+    volumes:
+      - ${PUBLIC_HTML_DIR}:/usr/local/apache2/htdocs/
