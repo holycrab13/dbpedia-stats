@@ -5,6 +5,7 @@ import java.io.IOException;
 
 import java.text.ParseException;
 
+import org.dbpedia.stats.analyzer.InstanceCountAnalyzer;
 import org.dbpedia.stats.analyzer.PropertyCountAnalyzer;
 import org.dbpedia.stats.analyzer.TripleCountAnalyzer;
 
@@ -24,9 +25,9 @@ public class Main {
 		
 		StatsAnalyzerBase[] analyzers = new StatsAnalyzerBase[] {
 			new TripleCountAnalyzer(),
-			new PropertyCountAnalyzer()
+			new PropertyCountAnalyzer(),
+			new InstanceCountAnalyzer()
 		};
-		
 
 		System.out.println("COLLECTION_URI: " + collectionUri);
 		System.out.println("STATS_FILE: " + statsFile);
@@ -53,8 +54,6 @@ public class Main {
 					if(!downloader.hasNewCollectionData(collectionUri)) {
 						continue;
 					}
-					
-					
 						
 					System.out.println("Change detected! Clearing up old data...");
 					

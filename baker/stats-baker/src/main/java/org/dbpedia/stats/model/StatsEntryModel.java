@@ -6,6 +6,8 @@ public class StatsEntryModel {
 	
 	private long propertyCount;
 	
+	private long instanceCount;
+	
 	private String time;
 
 	public long getTripleCount() {
@@ -30,5 +32,13 @@ public class StatsEntryModel {
 
 	public void setPropertyCount(long propertyCount) {
 		this.propertyCount = propertyCount;
+	}
+
+	public long getInstanceCount() {
+		return instanceCount;
+	}
+
+	public void setInstanceCount(long instanceCount) {
+		this.instanceCount = instanceCount;
 	}
 }
